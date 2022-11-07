@@ -1,0 +1,3 @@
+<launch>
+    <node name="talker" pkg="ros_test_actions" type="talker.py" />
+</launch>
