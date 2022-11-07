@@ -40,15 +40,17 @@ def test_node():
     launch = roslaunch.parent.ROSLaunchParent(uuid, [path])
 
     launch.start() # Launch test
-    rospy.loginfo("started")
+    rospy.loginfo("Started")
 
     node = Listener()
     result = node.test_node()
 
     launch.shutdown()
     if result:
+        rospy.loginfo("Success")
         sys.exit(0)
     else:
+        rospy.loginfo("Fail")
         sys.exit(1)
     
 
